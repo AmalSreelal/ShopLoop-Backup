@@ -7,7 +7,11 @@ const getFilteredProducts = async (req, res) => {
     let filters = {};
 
     if (category.length) {
-      filters.category = { $in: category.split(",") };
+      const categories = category.split(",");
+      filters.$or = [
+        { category: { $in: categories } },
+        { secondaryCategory: { $in: categories } },
+      ];
     }
 
     if (brand.length) {
@@ -47,7 +51,7 @@ const getFilteredProducts = async (req, res) => {
       data: products,
     });
   } catch (e) {
-    console.log(error);
+    console.error(error);
     res.status(500).json({
       success: false,
       message: "Some error occured",
