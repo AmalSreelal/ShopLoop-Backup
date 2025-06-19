@@ -75,6 +75,7 @@ export const addProductFormElements = [
       { id: "kids", label: "Kids" },
       { id: "accessories", label: "Accessories" },
       { id: "footwear", label: "Footwear" },
+      { id: "cloths", label: "Clothes" },
     ],
   },
   {
@@ -150,6 +151,11 @@ export const shoppingViewHeaderMenuItems = [
     path: "/shop/listing",
   },
   {
+    id: "cloths",
+    label: "Cloths",
+    path: "/shop/listing",
+  }
+  {
     id: "search",
     label: "Search",
     path: "/shop/search",
@@ -162,6 +168,16 @@ export const categoryOptionsMap = {
   kids: "Kids",
   accessories: "Accessories",
   footwear: "Footwear",
+  clothing: "clothing",
+};
+
+export const secondaryCategoryOptionsMap = {
+  men: "Men",
+  women: "Women",
+  kids: "Kids",
+  accessories: "Accessories",
+  footwear: "Footwear",
+  clothing: "Clothing",
 };
 
 export const brandOptionsMap = {
@@ -180,6 +196,7 @@ export const filterOptions = {
     { id: "kids", label: "Kids" },
     { id: "accessories", label: "Accessories" },
     { id: "footwear", label: "Footwear" },
+    { id: "cloths", label: "Cloths" },
   ],
   brand: [
     { id: "nike", label: "Nike" },
@@ -231,6 +248,7 @@ export const addressFormControls = [
     label: "Notes",
     name: "notes",
     componentType: "textarea",
-    placeholder: "Enter any additional notes",
+    placeholder: "Enter Your Landmark Here",
   },
 ];
+

@@ -16,7 +16,17 @@ import {
   UmbrellaIcon,
   WashingMachine,
   WatchIcon,
+  Footprints,
+  FootprintsIcon,
 } from "lucide-react";
+import {
+  FaPerson,
+  FaPersonDress,
+  FaShirt,
+  FaChildReaching,
+  FaRing,
+  FaShoePrints,
+} from "react-icons/fa6";
 import { Card, CardContent } from "@/components/ui/card";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -32,11 +42,12 @@ import ProductDetailsDialog from "@/components/shopping-view/product-details";
 import { getFeatureImages } from "@/store/common-slice";
 
 const categoriesWithIcon = [
-  { id: "men", label: "Men", icon: ShirtIcon },
-  { id: "women", label: "Women", icon: CloudLightning },
+  { id: "men", label: "Men", icon: FaPerson },
+  { id: "women", label: "Women", icon: FaPersonDress },
   { id: "kids", label: "Kids", icon: BabyIcon },
   { id: "accessories", label: "Accessories", icon: WatchIcon },
-  { id: "footwear", label: "Footwear", icon: UmbrellaIcon },
+  { id: "footwear", label: "Footwear", icon: FootprintsIcon },
+  { id: "cloths", label: "Cloths", icon: ShirtIcon },
 ];
 
 const brandsWithIcon = [
